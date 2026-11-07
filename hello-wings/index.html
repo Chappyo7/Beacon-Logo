@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hello Wings | Montgomeryville, PA</title>
+<meta name="description" content="Hello Wings: a casual, family-friendly chicken wings spot in Montgomeryville, Pennsylvania. Crispy wings, chicken cutlet plates and fried rice.">
+<meta property="og:title" content="Hello Wings | Montgomeryville, PA">
+<meta property="og:description" content="Crispy &amp; juicy jumbo wings, chicken cutlet plates and fried rice in Montgomeryville, PA. Rated 4.6★ on Google.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐥</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#e8382f; --red-dark:#b8221b; --navy:#141a3a; --navy-2:#1e2654;
+    --cream:#fff8ee; --yellow:#ffc531; --ink:#1b1b1f; --muted:#5d5d68;
+    --card:#ffffff; --line:#f0e3cf;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.55}
+  h1,h2,h3{font-family:"Baloo 2",system-ui,sans-serif;line-height:1.05}
+  a{color:inherit}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:10;background:var(--navy);color:#fff}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:8px;text-decoration:none;font-family:"Baloo 2";font-weight:800;font-size:1.5rem;letter-spacing:.5px}
+  .brand .h{color:var(--red)}
+  .brand svg{width:34px;height:34px}
+  nav ul{display:flex;gap:22px;list-style:none}
+  nav ul a{text-decoration:none;font-weight:500;opacity:.85}
+  nav ul a:hover{opacity:1;color:var(--yellow)}
+  @media(max-width:640px){nav ul{display:none}}
+
+  /* hero */
+  .hero{background:radial-gradient(1200px 500px at 80% -10%,var(--navy-2),var(--navy));color:#fff;padding:72px 0 96px;position:relative;overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+  .eyebrow{display:inline-block;background:rgba(255,197,49,.15);color:var(--yellow);border:1px solid rgba(255,197,49,.35);padding:6px 12px;border-radius:999px;font-size:.85rem;font-weight:600;margin-bottom:18px}
+  .hero h1{font-size:clamp(3rem,8vw,5.5rem);font-weight:800}
+  .hero h1 .r{color:var(--red);text-shadow:0 0 30px rgba(232,56,47,.45)}
+  .hero p.lead{font-size:1.15rem;opacity:.85;max-width:520px;margin:16px 0 28px}
+  .btns{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .15s,background .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-red{background:var(--red);color:#fff}
+  .btn-red:hover{background:var(--red-dark)}
+  .btn-ghost{border:2px solid rgba(255,255,255,.35);color:#fff}
+  .btn-ghost:hover{border-color:#fff}
+  .rating{display:flex;align-items:center;gap:10px;margin-top:28px;font-size:.95rem;opacity:.9}
+  .stars{color:var(--yellow);letter-spacing:2px;font-size:1.1rem}
+  .mascot{justify-self:center;width:min(320px,80%);filter:drop-shadow(0 20px 40px rgba(0,0,0,.4));animation:bob 3.2s ease-in-out infinite}
+  @keyframes bob{50%{transform:translateY(-12px) rotate(-2deg)}}
+  .neon{position:absolute;bottom:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--red),var(--yellow),var(--red))}
+  @media(max-width:780px){.hero .wrap{grid-template-columns:1fr;text-align:center}.hero p.lead{margin-inline:auto}.btns,.rating{justify-content:center}.mascot{grid-row:1;width:180px}}
+
+  section{padding:80px 0}
+  .sec-head{text-align:center;margin-bottom:44px}
+  .sec-head h2{font-size:clamp(2.2rem,5vw,3rem);font-weight:800}
+  .sec-head h2 span{color:var(--red)}
+  .sec-head p{color:var(--muted);max-width:560px;margin:8px auto 0}
+
+  /* menu */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 6px 20px rgba(60,30,0,.05);transition:transform .2s,box-shadow .2s}
+  .card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(60,30,0,.1)}
+  .card .ico{font-size:2.6rem;width:72px;height:72px;display:grid;place-items:center;background:#fff1e6;border-radius:18px;margin-bottom:16px}
+  .card h3{font-size:1.6rem;margin-bottom:6px}
+  .card p{color:var(--muted)}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .tag{font-size:.8rem;font-weight:600;padding:5px 10px;border-radius:999px;background:#fdeceb;color:var(--red-dark)}
+  .note{text-align:center;color:var(--muted);margin-top:28px;font-size:.95rem}
+
+  /* about */
+  .about{background:#fff;border-block:1px solid var(--line)}
+  .about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .about h2{font-size:clamp(2.2rem,5vw,3rem);margin-bottom:16px}
+  .about h2 span{color:var(--red)}
+  .about p{color:var(--muted);margin-bottom:14px;font-size:1.05rem}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .stat{background:var(--cream);border:1px solid var(--line);border-radius:18px;padding:22px;text-align:center}
+  .stat b{display:block;font-family:"Baloo 2";font-size:2.4rem;color:var(--red);line-height:1}
+  .stat small{color:var(--muted);font-weight:500}
+  @media(max-width:780px){.about .wrap{grid-template-columns:minmax(0,1fr)}.stat{padding:16px 8px}.stat b{font-size:1.8rem}}
+
+  /* visit */
+  .visit-card{background:var(--navy);color:#fff;border-radius:28px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:36px;position:relative;overflow:hidden}
+  .visit-card h3{font-size:1.4rem;color:var(--yellow);margin-bottom:8px}
+  .visit-card .row{margin-bottom:22px}
+  .visit-card .row p{opacity:.9}
+  .hours{list-style:none}
+  .hours li{display:flex;justify-content:space-between;border-bottom:1px dashed rgba(255,255,255,.15);padding:6px 0}
+  .map{border-radius:20px;overflow:hidden;min-height:300px;border:0;width:100%;height:100%}
+  @media(max-width:780px){.visit-card{grid-template-columns:1fr;padding:28px}}
+
+  footer{background:var(--navy);color:rgba(255,255,255,.7);padding:36px 0;text-align:center;font-size:.9rem}
+  footer .brand{justify-content:center;color:#fff;margin-bottom:8px}
+  footer a{color:var(--yellow)}
+  [hidden]{display:none!important}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     EDIT BUSINESS DETAILS HERE. Leave a value "" to hide it.
+     ============================================================ -->
+<script>
+  window.HW = {
+    phone: "",          // TODO: add phone, e.g. "(215) 555-0123"
+    address: "408 Doylestown Road, Montgomeryville, PA 18936",
+    instagram: "hellowings_pa",
+    orderUrl: "https://hellowingspa.com",   // online ordering link
+    hours: [["Open 7 days","11am – 8pm"]]
+  };
+</script>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="chick" viewBox="0 0 200 200">
+      <ellipse cx="100" cy="186" rx="52" ry="8" fill="rgba(0,0,0,.18)"/>
+      <path d="M68 168l-6 16M80 170l2 16M120 170l-2 16M132 168l6 16" stroke="#ffb020" stroke-width="7" stroke-linecap="round"/>
+      <ellipse cx="100" cy="118" rx="62" ry="58" fill="#fff"/>
+      <ellipse cx="100" cy="118" rx="62" ry="58" fill="none" stroke="#e9e4f0" stroke-width="3"/>
+      <path d="M40 120c-16-4-26 6-24 18 10-2 18 0 26-6z" fill="#f4f1f8"/>
+      <path d="M160 120c16-4 26 6 24 18-10-2-18 0-26-6z" fill="#f4f1f8"/>
+      <path d="M86 58c-6-18 8-26 14-14 4-16 22-14 18 2 14-6 20 10 6 16z" fill="#e8382f"/>
+      <circle cx="80" cy="106" r="8" fill="#141a3a"/><circle cx="83" cy="103" r="2.6" fill="#fff"/>
+      <circle cx="120" cy="106" r="8" fill="#141a3a"/><circle cx="123" cy="103" r="2.6" fill="#fff"/>
+      <ellipse cx="68" cy="124" rx="9" ry="5" fill="#ffb3b0"/><ellipse cx="132" cy="124" rx="9" ry="5" fill="#ffb3b0"/>
+      <path d="M90 118l10 12 10-12z" fill="#ffb020"/>
+    </symbol>
+  </defs>
+</svg>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top"><svg><use href="#chick"/></svg><span><span class="h">HELLO</span> WINGS</span></a>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">📍 408 Doylestown Rd · Montgomeryville, PA</span>
+      <h1><span class="r">Hello</span> Wings</h1>
+      <p class="lead">Crispy &amp; juicy JUMBO chicken wings, Buffalo style or Korean fried chicken, plus cutlet plates and fried rice. Open 7 days, 11am – 8pm.</p>
+      <div class="btns">
+        <a class="btn btn-red" id="ctaOrder" href="https://hellowingspa.com" target="_blank" rel="noopener">🛒 Order Online</a>
+        <a class="btn btn-ghost" id="ctaCall" href="#visit" hidden>📞 Call</a>
+        <a class="btn btn-ghost" id="ctaDir" target="_blank" rel="noopener">🧭 Get Directions</a>
+      </div>
+      <div class="rating"><span class="stars">★★★★★</span><span><b>4.6</b> on Google · 250+ reviews</span></div>
+    </div>
+    <svg class="mascot" viewBox="0 0 200 200"><use href="#chick"/></svg>
+  </div>
+  <div class="neon"></div>
+</header>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>What's <span>Cookin'</span></h2>
+      <p>A few of the favorites. Stop in or give us a call for the full menu and today's prices.</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="ico">🍗</div>
+        <h3>Jumbo Wings</h3>
+        <p>Crispy outside, juicy inside, and seriously big. Our namesake, and the reason people keep coming back.</p>
+        <div class="tags"><span class="tag">Buffalo</span><span class="tag">Korean fried chicken</span><span class="tag">Jumbo</span></div>
+      </div>
+      <div class="card">
+        <div class="ico">🍱</div>
+        <h3>Chicken Cutlet Plate</h3>
+        <p>Golden fried cutlet smothered in rich brown sauce, served with rice, sweet corn, pickles, fresh tomatoes, creamy slaw and a side of fries.</p>
+        <div class="tags"><span class="tag">Hearty</span><span class="tag">Full meal</span></div>
+      </div>
+      <div class="card">
+        <div class="ico">🍚</div>
+        <h3>Fried Rice</h3>
+        <p>Wok-tossed fried rice loaded with veggies. Great on its own, even better next to a basket of wings.</p>
+        <div class="tags"><span class="tag">Wing sidekick</span></div>
+      </div>
+      <div class="card">
+        <div class="ico">🍟</div>
+        <h3>Sides &amp; Fries</h3>
+        <p>Crispy fries, slaw and more. Round out your order and share with the table.</p>
+        <div class="tags"><span class="tag">Shareable</span></div>
+      </div>
+    </div>
+    <p class="note">Full menu and prices at <a href="https://hellowingspa.com" target="_blank" rel="noopener" style="color:var(--red);font-weight:600">hellowingspa.com</a>. Ask about daily specials!</p>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div>
+      <h2>Say <span>hello</span> to your new wing spot.</h2>
+      <p>Hello Wings is a casual, family-friendly eatery in Montgomeryville serving up crispy wings and comforting plates for lunch, dinner and everything in between.</p>
+      <p>Bring the family, grab takeout on the way home, or come hungry. Our regulars rate us 4.6 stars on Google.</p>
+      <div class="btns" style="margin-top:20px">
+        <a class="btn btn-red" id="igBtn" target="_blank" rel="noopener" hidden>📸 Follow on Instagram</a>
+        <a class="btn btn-red" id="orderBtn" target="_blank" rel="noopener" hidden>🛒 Order Online</a>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>4.6★</b><small>Google rating</small></div>
+      <div class="stat"><b>250+</b><small>Reviews</small></div>
+      <div class="stat"><b>🐥</b><small>Family friendly</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Come <span>Visit</span></h2>
+      <p>Look for the big red sign with our little chick.</p>
+    </div>
+    <div class="visit-card">
+      <div>
+        <div class="row"><h3>Location</h3><p id="addr">Montgomeryville, PA</p></div>
+        <div class="row" id="phoneRow" hidden><h3>Phone</h3><p><a id="phoneLink"></a></p></div>
+        <div class="row" id="hoursRow" hidden><h3>Hours</h3><ul class="hours" id="hoursList"></ul></div>
+        <div class="row" id="hoursFallback"><h3>Hours</h3><p>Check our <a id="gLink" target="_blank" rel="noopener" style="color:var(--yellow)">Google listing</a> for today's hours.</p></div>
+        <div class="btns"><a class="btn btn-red" id="dirBtn" target="_blank" rel="noopener">🧭 Directions</a></div>
+      </div>
+      <iframe class="map" id="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map to Hello Wings"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand"><svg width="28" height="28"><use href="#chick"/></svg><span><span style="color:var(--red)">HELLO</span> WINGS</span></div>
+  <p>Chicken wings in Montgomeryville, Pennsylvania</p>
+  <p id="footIg" hidden style="margin-top:6px"></p>
+  <p style="margin-top:10px">© <span id="yr"></span> Hello Wings</p>
+</footer>
+
+<script>
+(function(){
+  var c = window.HW;
+  var q = encodeURIComponent(c.address || "Hello Wings, Montgomeryville, PA");
+  var maps = "https://www.google.com/maps/search/?api=1&query=" + q;
+  ["ctaDir","dirBtn","gLink"].forEach(function(id){ document.getElementById(id).href = maps; });
+  document.getElementById("map").src = "https://maps.google.com/maps?q=" + q + "&z=15&output=embed";
+  if (c.address) document.getElementById("addr").textContent = c.address;
+
+  if (c.phone) {
+    var tel = "tel:" + c.phone.replace(/[^\d+]/g, "");
+    var cc = document.getElementById("ctaCall"); cc.href = tel; cc.hidden = false;
+    var pl = document.getElementById("phoneLink"); pl.href = tel; pl.textContent = c.phone;
+    document.getElementById("phoneRow").hidden = false;
+  } else {
+    var cta = document.getElementById("ctaCall");
+    cta.hidden = true;
+  }
+
+  if (c.hours && c.hours.length) {
+    var ul = document.getElementById("hoursList");
+    c.hours.forEach(function(h){
+      var li = document.createElement("li");
+      var a = document.createElement("span"); a.textContent = h[0];
+      var b = document.createElement("span"); b.textContent = h[1];
+      li.append(a, b); ul.appendChild(li);
+    });
+    document.getElementById("hoursRow").hidden = false;
+    document.getElementById("hoursFallback").hidden = true;
+  }
+
+  if (c.instagram) {
+    var ig = "https://instagram.com/" + c.instagram;
+    var b = document.getElementById("igBtn"); b.href = ig; b.hidden = false;
+    var f = document.getElementById("footIg");
+    f.innerHTML = 'Instagram: <a target="_blank" rel="noopener"></a>';
+    f.querySelector("a").href = ig; f.querySelector("a").textContent = "@" + c.instagram; f.hidden = false;
+  }
+  if (c.orderUrl) { var o = document.getElementById("orderBtn"); o.href = c.orderUrl; o.hidden = false; }
+
+  document.getElementById("yr").textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
