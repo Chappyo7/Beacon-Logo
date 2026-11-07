@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hello Wings | Montgomeryville, PA</title>
-<meta name="description" content="Hello Wings: a casual, family-friendly chicken wings spot in Montgomeryville, Pennsylvania. Crispy wings, chicken cutlet plates and fried rice.">
+<meta name="description" content="Hello Wings: jumbo chicken wings and Korean fried chicken in Montgomeryville, PA. 15 flavors, pork cutlet, bibimbap, burgers and more. Open 7 days 11am–8pm.">
 <meta property="og:title" content="Hello Wings | Montgomeryville, PA">
-<meta property="og:description" content="Crispy &amp; juicy jumbo wings, chicken cutlet plates and fried rice in Montgomeryville, PA. Rated 4.6★ on Google.">
+<meta property="og:description" content="Crispy &amp; juicy jumbo wings and Korean favorites in Montgomeryville, PA. Rated 4.6★ on Google.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐥</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -72,6 +72,30 @@
   .tag{font-size:.8rem;font-weight:600;padding:5px 10px;border-radius:999px;background:#fdeceb;color:var(--red-dark)}
   .note{text-align:center;color:var(--muted);margin-top:28px;font-size:.95rem}
 
+  /* full menu */
+  .m-feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:22px;margin-bottom:22px}
+  .m-grid{columns:3 300px;column-gap:22px}
+  .m-grid .m-block{break-inside:avoid;margin-bottom:22px}
+  .m-block{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:0 6px 20px rgba(60,30,0,.05)}
+  .m-feature .m-block:first-child{background:var(--navy);color:#fff;border:0}
+  .m-feature .m-block:first-child .m-list li{border-color:rgba(255,255,255,.15)}
+  .m-feature .m-block:first-child b{color:var(--yellow)}
+  .m-feature .m-block:first-child .m-fine{color:rgba(255,255,255,.7)}
+  .m-block h3{font-size:1.5rem;margin-bottom:12px}
+  .m-block h3 small{font-family:Inter;font-size:.85rem;font-weight:500;opacity:.6;margin-left:6px}
+  .m-block h4{font-family:"Baloo 2";font-size:1.15rem;margin:4px 0 10px}
+  .m-block h4 + .chips{margin-bottom:18px}
+  .m-list{list-style:none}
+  .m-list li{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed var(--line)}
+  .m-list li:last-child{border-bottom:0}
+  .m-list i{display:block;font-style:normal;font-size:.82rem;color:var(--muted)}
+  .m-feature .m-block:first-child .m-list i{color:rgba(255,255,255,.6)}
+  .m-list b{white-space:nowrap;color:var(--red-dark);font-weight:600}
+  .m-fine{font-size:.85rem;color:var(--muted);margin-top:12px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chips span{font-size:.88rem;font-weight:600;padding:7px 12px;border-radius:999px;background:#fdeceb;color:var(--red-dark)}
+  @media(max-width:780px){.m-feature{grid-template-columns:minmax(0,1fr)}}
+
   /* about */
   .about{background:#fff;border-block:1px solid var(--line)}
   .about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
@@ -107,7 +131,7 @@
      ============================================================ -->
 <script>
   window.HW = {
-    phone: "(267) 217-7359",
+    phone: "(445) 306-1539",
     address: "408 Doylestown Road, Montgomeryville, PA 18936",
     instagram: "hellowings_pa",
     orderUrl: "",       // online ordering link, if they get one
@@ -149,7 +173,7 @@
     <div>
       <span class="eyebrow">📍 408 Doylestown Rd · Montgomeryville, PA</span>
       <h1><span class="r">Hello</span> Wings</h1>
-      <p class="lead">Crispy &amp; juicy JUMBO chicken wings, Buffalo style or Korean fried chicken, plus cutlet plates and fried rice. Open 7 days, 11am – 8pm.</p>
+      <p class="lead">Crispy &amp; juicy JUMBO chicken wings in 15 flavors, from Buffalo to Korean Sweet &amp; Spicy, plus pork cutlet, bibimbap and more. Open 7 days, 11am – 8pm.</p>
       <div class="btns">
         <a class="btn btn-red" id="ctaCall" href="#visit" hidden>📞 Call to Order</a>
         <a class="btn btn-ghost" id="ctaDir" target="_blank" rel="noopener">🧭 Get Directions</a>
@@ -164,36 +188,85 @@
 <section id="menu">
   <div class="wrap">
     <div class="sec-head">
-      <h2>What's <span>Cookin'</span></h2>
-      <p>A few of the favorites. Stop in or give us a call to order.</p>
+      <h2>The <span>Menu</span></h2>
+      <p>Jumbo wings your way, plus Korean favorites, burgers and sides. Call to order!</p>
     </div>
-    <div class="grid">
-      <div class="card">
-        <div class="ico">🍗</div>
-        <h3>Jumbo Wings</h3>
-        <p>Crispy outside, juicy inside, and seriously big. Our namesake, and the reason people keep coming back.</p>
-        <div class="tags"><span class="tag">Buffalo</span><span class="tag">Korean fried chicken</span><span class="tag">Jumbo</span></div>
+
+    <div class="m-feature">
+      <div class="m-block">
+        <h3>🍗 Chicken <small>치킨</small></h3>
+        <ul class="m-list">
+          <li><span>6 pcs</span><b>$11.99</b></li>
+          <li><span>10 pcs</span><b>$17.99</b></li>
+          <li><span>15 pcs</span><b>$25.99</b></li>
+          <li><span>20 pcs</span><b>$32.99</b></li>
+          <li><span>30 pcs</span><b>$46.99</b></li>
+        </ul>
+        <p class="m-fine">All chicken orders come with your choice of celery or pickled radish.</p>
       </div>
-      <div class="card">
-        <div class="ico">🍱</div>
-        <h3>Chicken Cutlet Plate</h3>
-        <p>Golden fried cutlet smothered in rich brown sauce, served with rice, sweet corn, pickles, fresh tomatoes, creamy slaw and a side of fries.</p>
-        <div class="tags"><span class="tag">Hearty</span><span class="tag">Full meal</span></div>
-      </div>
-      <div class="card">
-        <div class="ico">🍚</div>
-        <h3>Fried Rice</h3>
-        <p>Wok-tossed fried rice loaded with veggies. Great on its own, even better next to a basket of wings.</p>
-        <div class="tags"><span class="tag">Wing sidekick</span></div>
-      </div>
-      <div class="card">
-        <div class="ico">🍟</div>
-        <h3>Sides &amp; Fries</h3>
-        <p>Crispy fries, slaw and more. Round out your order and share with the table.</p>
-        <div class="tags"><span class="tag">Shareable</span></div>
+      <div class="m-block">
+        <h4>1. Choose your style</h4>
+        <div class="chips"><span>Crispy</span><span>Naked</span><span>Boneless</span></div>
+        <h4>2. Choose your flavor</h4>
+        <div class="chips">
+          <span>Fried</span><span>Korean Sweet &amp; Spicy</span><span>Snow Cheese</span><span>Honey Butter Garlic</span><span>Mango Habanero</span><span>BBQ</span><span>Honey BBQ</span><span>Buffalo (Mild)</span><span>Buffalo (Hot)</span><span>Honey Mustard</span><span>Golden Garlic</span><span>Garlic Parm</span><span>Thai Chilli</span><span>Teriyaki</span><span>Lemon Pepper</span>
+        </div>
       </div>
     </div>
-    <p class="note">Call <a href="tel:2672177359" style="color:var(--red);font-weight:600">(267) 217-7359</a> for the full menu and prices. Ask about daily specials!</p>
+
+    <div class="m-grid">
+      <div class="m-block">
+        <h3>🍔 Burgers &amp; Sandwiches</h3>
+        <ul class="m-list">
+          <li><span>Chicken Sandwich <i>Mild or Spicy</i></span><b>$10.99</b></li>
+          <li><span>Shrimp Burger <i>Mild or Spicy</i></span><b>$11.99</b></li>
+          <li><span>Chicken Sandwich Meal</span><b>$13.99</b></li>
+          <li><span>Shrimp Burger Meal</span><b>$14.99</b></li>
+        </ul>
+        <p class="m-fine">Meals come with regular fries &amp; a soda. Upgrade to waffle or curly fries +$1.00, onion rings +$1.50.</p>
+      </div>
+      <div class="m-block">
+        <h3>🍱 Korean Meals</h3>
+        <ul class="m-list">
+          <li><span>Pork Cutlet <i>돈까스</i></span><b>$17.99</b></li>
+          <li><span>Bibimbap <i>비빔밥</i></span><b>$14.99</b></li>
+          <li><span>Mandu / Dumplings <i>6 pcs · pork, beef or shrimp</i></span><b>$8.99</b></li>
+        </ul>
+      </div>
+      <div class="m-block">
+        <h3>🍟 Sides <small>Reg / Large</small></h3>
+        <ul class="m-list">
+          <li><span>French Fries</span><b>$3.99 / $5.99</b></li>
+          <li><span>Waffle Fries</span><b>$4.99 / $6.99</b></li>
+          <li><span>Curly Fries</span><b>$4.99 / $6.99</b></li>
+          <li><span>Onion Rings</span><b>$5.99 / $7.99</b></li>
+          <li><span>Corn Dog <i>Reg · Cheese · Potato</i></span><b>$3.99 / $4.99 / $4.99</b></li>
+          <li><span>Mozzarella Sticks <i>3 pcs</i></span><b>$4.49</b></li>
+          <li><span>Cheese Topping</span><b>+$1.50</b></li>
+        </ul>
+      </div>
+      <div class="m-block">
+        <h3>🥤 Drinks</h3>
+        <ul class="m-list">
+          <li><span>Smoothie <i>Strawberry Banana, Mango, Tropical Guava, Berry Berry</i></span><b>$6.99</b></li>
+          <li><span>Milkshake <i>Vanilla, Strawberry, Cookies n Cream</i></span><b>$6.99</b></li>
+          <li><span>Lemonade</span><b>$3.99</b></li>
+          <li><span>Soda <i>Coke / Sprite</i></span><b>$1.49</b></li>
+          <li><span>Bottled Water</span><b>$1.99</b></li>
+          <li><span>2L Soda</span><b>$3.99</b></li>
+        </ul>
+      </div>
+      <div class="m-block">
+        <h3>➕ Extras</h3>
+        <ul class="m-list">
+          <li><span>Extra Dipping Sauce</span><b>$2.00</b></li>
+          <li><span>Cheese Dipping Sauce</span><b>$1.50</b></li>
+          <li><span>Extra Celery <i>with ranch or blue cheese</i></span><b>$1.50</b></li>
+          <li><span>Extra Pickled Radish</span><b>$1.50</b></li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">Prices may change. Call <a href="tel:4453061539" style="color:var(--red);font-weight:600">(445) 306-1539</a> to order.</p>
   </div>
 </section>
 
@@ -201,7 +274,7 @@
   <div class="wrap">
     <div>
       <h2>Say <span>hello</span> to your new wing spot.</h2>
-      <p>Hello Wings is a casual, family-friendly eatery in Montgomeryville serving up crispy wings and comforting plates for lunch, dinner and everything in between.</p>
+      <p>Hello Wings is a casual, family-friendly eatery in Montgomeryville serving up jumbo wings in 15 flavors alongside Korean favorites like pork cutlet (돈까스), bibimbap and mandu.</p>
       <p>Bring the family, grab takeout on the way home, or come hungry. Our regulars rate us 4.6 stars on Google.</p>
       <div class="btns" style="margin-top:20px">
         <a class="btn btn-red" id="igBtn" target="_blank" rel="noopener" hidden>📸 Follow on Instagram</a>
